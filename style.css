@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    transition: background 0.5s ease;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #243b55;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    outline-color: #5b86e5;
+}
+
+.weather-card {
+    margin-top: 25px;
+    padding: 25px 15px;
+    border-radius: 15px;
+    background: #edf5ff;
+    transition: background 0.5s ease;
+}
+
+.weather-icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.weather-card h2 {
+    color: #243b55;
+    margin-bottom: 12px;
+}
+
+.weather-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Different weather backgrounds */
+
+body.sunny {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+body.cloudy {
+    background: linear-gradient(135deg, #d7d2cc, #a8c0d6);
+}
+
+body.rainy {
+    background: linear-gradient(135deg, #616f85, #91a7c0);
+}
+
+body.stormy {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+body.snowy {
+    background: linear-gradient(135deg, #e6f0ff, #b8d8f8);
+}
+
+body.windy {
+    background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+}
+
+body.foggy {
+    background: linear-gradient(135deg, #bdc3c7, #7f8c8d);
+}
+
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .weather-icon {
+        font-size: 65px;
+    }
+}
